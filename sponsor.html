@@ -397,40 +397,28 @@
         }
         .track-photos {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 0.75rem;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 200px 200px;
+            gap: 0.625rem;
+        }
+        @media (min-width: 768px) {
+            .track-photos { grid-template-rows: 220px 220px; }
         }
         .track-photo {
             border-radius: 12px;
             overflow: hidden;
             position: relative;
         }
-        .track-photo-inner {
+        .track-photo img {
             width: 100%;
-            padding-top: 120%;
-            background-size: cover;
-            background-position: center;
-            position: relative;
+            height: 100%;
+            object-fit: cover;
+            display: block;
         }
-        .track-photo:nth-child(2) .track-photo-inner { padding-top: 150%; }
-        .track-photo:nth-child(3) .track-photo-inner { padding-top: 150%; }
-        .track-photo:nth-child(4) .track-photo-inner { padding-top: 120%; }
-        .track-photo:nth-child(2) { transform: translateY(2rem); }
-        .track-photo:nth-child(3) { transform: translateY(-1rem); }
-        .track-photo-label {
-            position: absolute;
-            bottom: 0.75rem;
-            left: 0.75rem;
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 0.6875rem;
-            letter-spacing: 0.05em;
-            text-transform: uppercase;
-            color: var(--white);
-            background: rgba(9, 9, 11, 0.75);
-            backdrop-filter: blur(8px);
-            padding: 0.375rem 0.625rem;
-            border-radius: 4px;
-        }
+        /* Wide horizontal photo — spans 2 columns */
+        .track-photo--wide { grid-column: span 2; }
+        /* Tall vertical photo — spans 2 rows */
+        .track-photo--tall { grid-row: span 2; }
         .track-callout {
             border-left: 2px solid var(--accent);
             padding-left: 1.25rem;
@@ -885,23 +873,26 @@
                 </div>
 
                 <div class="track-photos reveal">
-                    <div class="track-photo">
-                        <div class="track-photo-inner" style="background-image: url('images/keynote.jpg');"></div>
+                    <div class="track-photo track-photo--wide">
+                        <img src="images/keynote.jpg" alt="Opening keynote at the Lovable Halifax Women's AI Hackathon">
+                    </div>
+                    <div class="track-photo track-photo--tall">
+                        <img src="images/building.jpg" alt="Teams building together at the hackathon">
                     </div>
                     <div class="track-photo">
-                        <div class="track-photo-inner" style="background-image: url('images/building.jpg');"></div>
+                        <img src="images/demo.jpeg" alt="Teams presenting their demos">
                     </div>
                     <div class="track-photo">
-                        <div class="track-photo-inner" style="background-image: url('images/demo.jpeg');"></div>
-                    </div>
-                    <div class="track-photo">
-                        <div class="track-photo-inner" style="background-image: url('images/awards.jpeg');"></div>
+                        <img src="images/awards.jpeg" alt="Winners receiving their awards">
                     </div>
                 </div>
             </div>
 
             <div class="reveal" style="margin-top: 5rem;">
                 <img src="images/group.jpeg" alt="Lovable Halifax Women's AI Hackathon — full group" style="width: 100%; border-radius: 16px; display: block;">
+                <p style="text-align: center; margin-top: 1.5rem;">
+                    <a href="https://polaroid-wall-showcase.lovable.app/" target="_blank" rel="noopener" style="color: var(--accent); font-size: 0.9375rem; font-weight: 500; text-decoration: none; border-bottom: 1px solid rgba(203, 239, 67, 0.3); padding-bottom: 2px; transition: border-color 0.3s ease;">See more photos from the event &rarr;</a>
+                </p>
             </div>
 
             <div class="prev-sponsors reveal">
