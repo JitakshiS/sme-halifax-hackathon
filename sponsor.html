@@ -471,9 +471,9 @@
             flex-wrap: wrap;
         }
         .prev-sponsors-list img {
-            height: 32px;
+            height: 24px;
             width: auto;
-            opacity: 0.7;
+            opacity: 0.8;
             transition: opacity 0.3s ease;
         }
         .prev-sponsors-list img:hover {
@@ -531,6 +531,22 @@
             font-weight: 300;
         }
         .section-dark .roi-item p { color: var(--gray-400); }
+        .roi-example {
+            margin-top: 1rem;
+            padding: 0.875rem 1rem;
+            background: var(--glass);
+            border: 1px solid var(--glass-border);
+            border-radius: 8px;
+            font-size: 0.8125rem;
+            color: var(--gray-400);
+            line-height: 1.5;
+            font-style: italic;
+        }
+        .roi-example strong {
+            color: var(--accent);
+            font-weight: 500;
+            font-style: normal;
+        }
 
         .roi-callout {
             margin-top: 5rem;
@@ -604,17 +620,12 @@
             margin-bottom: 2rem;
         }
         .team-avatar {
-            width: 72px;
-            height: 72px;
+            width: 80px;
+            height: 80px;
             border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--black);
             flex-shrink: 0;
             position: relative;
+            overflow: hidden;
         }
         .team-avatar::after {
             content: '';
@@ -623,8 +634,11 @@
             border-radius: 50%;
             border: 1px solid var(--border-dark);
         }
-        .team-avatar-j { background: linear-gradient(135deg, var(--accent), #A8D935); }
-        .team-avatar-b { background: linear-gradient(135deg, #818CF8, #6366F1); color: var(--white); }
+        .team-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
         .team-name {
             font-size: 1.5rem;
             font-weight: 700;
@@ -872,24 +886,16 @@
 
                 <div class="track-photos reveal">
                     <div class="track-photo">
-                        <div class="track-photo-inner" style="background-image: url('images/keynote.jpg');">
-                            <span class="track-photo-label">Opening keynote</span>
-                        </div>
+                        <div class="track-photo-inner" style="background-image: url('images/keynote.jpg');"></div>
                     </div>
                     <div class="track-photo">
-                        <div class="track-photo-inner" style="background-image: url('images/building.jpg');">
-                            <span class="track-photo-label">Teams building</span>
-                        </div>
+                        <div class="track-photo-inner" style="background-image: url('images/building.jpg');"></div>
                     </div>
                     <div class="track-photo">
-                        <div class="track-photo-inner" style="background-image: url('images/demo.jpeg');">
-                            <span class="track-photo-label">Demo day</span>
-                        </div>
+                        <div class="track-photo-inner" style="background-image: url('images/demo.jpeg');"></div>
                     </div>
                     <div class="track-photo">
-                        <div class="track-photo-inner" style="background-image: url('images/awards.jpeg');">
-                            <span class="track-photo-label">Awards</span>
-                        </div>
+                        <div class="track-photo-inner" style="background-image: url('images/awards.jpeg');"></div>
                     </div>
                 </div>
             </div>
@@ -948,6 +954,7 @@
                     </div>
                     <h4>Brand Exposure</h4>
                     <p>All materials, documentary content, and social reach across every network.</p>
+                    <div class="roi-example"><strong>Example:</strong> Your logo on the event banner, in the documentary, across all social posts, and on every participant's screen during the build.</div>
                 </div>
                 <div class="roi-item">
                     <div class="roi-icon">
@@ -955,6 +962,7 @@
                     </div>
                     <h4>Customer Access</h4>
                     <p>100+ decision-makers actively choosing tools. Adoption, not impressions.</p>
+                    <div class="roi-example"><strong>Example:</strong> A restaurant owner discovers your POS system during the build and switches their whole business the next week.</div>
                 </div>
                 <div class="roi-item">
                     <div class="roi-icon">
@@ -962,6 +970,7 @@
                     </div>
                     <h4>Content Assets</h4>
                     <p>Professional photo, video, testimonials, and case studies for your own marketing.</p>
+                    <div class="roi-example"><strong>Example:</strong> A 60-second clip of teams building with your tool, ready for your social channels, plus written testimonials from participants.</div>
                 </div>
                 <div class="roi-item">
                     <div class="roi-icon">
@@ -969,6 +978,7 @@
                     </div>
                     <h4>Positioning</h4>
                     <p>Association with Atlantic Canada's premier AI innovation event for business.</p>
+                    <div class="roi-example"><strong>Example:</strong> Featured as a founding sponsor of the region's first AI hackathon for business — a story media outlets want to cover.</div>
                 </div>
             </div>
 
@@ -991,7 +1001,7 @@
                 <!-- Jitakshi -->
                 <div class="team-member">
                     <div class="team-member-header">
-                        <div class="team-avatar team-avatar-j">J</div>
+                        <div class="team-avatar"><img src="images/jitakshi.jpeg" alt="Jitakshi"></div>
                         <div>
                             <h3 class="team-name">Jitakshi</h3>
                             <p class="team-role-tag">Event Lead &amp; Tech Partnerships</p>
@@ -1013,7 +1023,7 @@
                 <!-- Bethany -->
                 <div class="team-member">
                     <div class="team-member-header">
-                        <div class="team-avatar team-avatar-b">B</div>
+                        <div class="team-avatar"><img src="images/bethany.jpeg" alt="Bethany Wilkie"></div>
                         <div>
                             <h3 class="team-name">Bethany Wilkie</h3>
                             <p class="team-role-tag">Business Strategy &amp; Atlantic Partnerships</p>
