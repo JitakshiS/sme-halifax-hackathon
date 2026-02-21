@@ -408,7 +408,8 @@
         .track-photo-inner {
             width: 100%;
             padding-top: 120%;
-            background: linear-gradient(135deg, var(--gray-900), var(--gray-800));
+            background-size: cover;
+            background-position: center;
             position: relative;
         }
         .track-photo:nth-child(2) .track-photo-inner { padding-top: 150%; }
@@ -871,26 +872,30 @@
 
                 <div class="track-photos reveal">
                     <div class="track-photo">
-                        <div class="track-photo-inner">
+                        <div class="track-photo-inner" style="background-image: url('images/keynote.jpg');">
                             <span class="track-photo-label">Opening keynote</span>
                         </div>
                     </div>
                     <div class="track-photo">
-                        <div class="track-photo-inner">
+                        <div class="track-photo-inner" style="background-image: url('images/building.jpg');">
                             <span class="track-photo-label">Teams building</span>
                         </div>
                     </div>
                     <div class="track-photo">
-                        <div class="track-photo-inner">
+                        <div class="track-photo-inner" style="background-image: url('images/demo.jpeg');">
                             <span class="track-photo-label">Demo day</span>
                         </div>
                     </div>
                     <div class="track-photo">
-                        <div class="track-photo-inner">
+                        <div class="track-photo-inner" style="background-image: url('images/awards.jpeg');">
                             <span class="track-photo-label">Awards</span>
                         </div>
                     </div>
                 </div>
+            </div>
+
+            <div class="reveal" style="margin-top: 5rem;">
+                <img src="images/group.jpeg" alt="Lovable Halifax Women's AI Hackathon — full group" style="width: 100%; border-radius: 16px; display: block;">
             </div>
 
             <div class="prev-sponsors reveal">
