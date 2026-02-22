@@ -277,16 +277,16 @@
         }
         .hero-meta span {
             font-family: 'JetBrains Mono', monospace;
-            font-size: 0.6875rem;
+            font-size: 0.8125rem;
             letter-spacing: 0.05em;
             text-transform: uppercase;
-            color: var(--gray-600);
+            color: var(--gray-400);
         }
         .hero-meta .sep {
-            width: 4px;
-            height: 4px;
+            width: 5px;
+            height: 5px;
             border-radius: 50%;
-            background: var(--gray-800);
+            background: var(--gray-600);
         }
 
         /* ---- Sections ---- */
@@ -595,45 +595,38 @@
         }
         .team-grid {
             display: grid;
-            grid-template-columns: 1fr 1px 1fr;
-            gap: 0;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
             max-width: 960px;
             margin: 0 auto;
-            align-items: start;
-        }
-        .team-divider {
-            background: var(--border-dark);
-            align-self: stretch;
         }
         @media (max-width: 768px) {
-            .team-grid { grid-template-columns: 1fr; gap: 3rem; }
-            .team-divider { display: none; }
+            .team-grid { grid-template-columns: 1fr; }
         }
-        .team-member {
-            padding: 0 3rem;
-            position: relative;
+        .team-card {
+            background: var(--glass);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            overflow: hidden;
+            transition: border-color 0.3s ease;
         }
-        @media (max-width: 768px) { .team-member { padding: 0; } }
-        .team-member-header {
+        .team-card:hover {
+            border-color: rgba(255, 255, 255, 0.14);
+        }
+        .team-card-top {
+            padding: 2.5rem 2.5rem 0;
             display: flex;
             align-items: center;
             gap: 1.25rem;
-            margin-bottom: 2rem;
         }
         .team-avatar {
-            width: 80px;
-            height: 80px;
+            width: 72px;
+            height: 72px;
             border-radius: 50%;
             flex-shrink: 0;
             position: relative;
             overflow: hidden;
-        }
-        .team-avatar::after {
-            content: '';
-            position: absolute;
-            inset: -3px;
-            border-radius: 50%;
-            border: 1px solid var(--border-dark);
+            border: 2px solid var(--glass-border);
         }
         .team-avatar img {
             width: 100%;
@@ -641,7 +634,7 @@
             object-fit: cover;
         }
         .team-name {
-            font-size: 1.5rem;
+            font-size: 1.375rem;
             font-weight: 700;
             letter-spacing: -0.02em;
             line-height: 1.2;
@@ -651,41 +644,41 @@
             font-size: 0.625rem;
             letter-spacing: 0.08em;
             text-transform: uppercase;
-            color: var(--gray-500);
-            margin-top: 0.25rem;
+            color: var(--accent);
+            margin-top: 0.375rem;
+        }
+        .team-card-body {
+            padding: 1.75rem 2.5rem 2.5rem;
         }
         .team-bio {
             font-size: 1rem;
-            color: var(--gray-200);
-            line-height: 1.7;
+            color: var(--gray-300);
+            line-height: 1.65;
             font-weight: 300;
-            margin-bottom: 2rem;
+            margin-bottom: 1.75rem;
         }
-        .team-credentials {
-            list-style: none;
-            border-top: 1px solid var(--border-dark);
-            padding-top: 1.5rem;
-        }
-        .team-credentials li {
-            font-size: 0.9375rem;
-            color: var(--gray-400);
-            padding: 0.5rem 0;
+        .team-tags {
             display: flex;
-            align-items: baseline;
-            gap: 0.75rem;
-            font-weight: 300;
+            flex-wrap: wrap;
+            gap: 0.5rem;
         }
-        .team-credentials li::before {
-            content: '';
-            width: 4px;
-            height: 4px;
-            border-radius: 50%;
-            background: var(--accent);
-            flex-shrink: 0;
-            margin-top: 0.5rem;
+        .team-tag {
+            font-size: 0.75rem;
+            padding: 0.375rem 0.875rem;
+            border-radius: 100px;
+            border: 1px solid var(--glass-border);
+            color: var(--gray-400);
+            font-weight: 400;
+            letter-spacing: 0.01em;
+            background: rgba(255, 255, 255, 0.02);
         }
-        .team-member:last-child .team-credentials li::before {
-            background: #818CF8;
+        .team-card:first-child .team-tag {
+            border-color: rgba(203, 239, 67, 0.15);
+            color: var(--gray-300);
+        }
+        .team-card:last-child .team-tag {
+            border-color: rgba(129, 140, 248, 0.15);
+            color: var(--gray-300);
         }
 
         /* ---- Footer ---- */
@@ -785,7 +778,7 @@
             <h1>The Atlantic<br><span>AI Hackathon</span></h1>
 
             <p class="hero-sub">
-                Put your brand in front of 100+ SMB decision-makers actively building with AI tools. One room. One day. Real business outcomes.
+                Put your brand in front of 100+ SMB decision-makers<br>actively building with AI tools. One room. One day. Real outcomes.
             </p>
 
             <div class="hero-cta-group">
@@ -963,7 +956,7 @@
                     <h4>Brand Exposure</h4>
                     <p>All materials, documentary content, and social reach across every network.</p>
                     <div class="roi-example">
-                        <img src="images/keynote.jpg" alt="Sponsor branding at the hackathon keynote">
+                        <img src="images/roi-branding.jpeg" alt="Sponsor logos projected large at the hackathon">
                         <p class="roi-example-text"><strong>Dec 2025:</strong> Lovable's brand across 200+ photos, a live showcase site, and dozens of organic social posts from 70 builders.</p>
                     </div>
                 </div>
@@ -974,7 +967,7 @@
                     <h4>Customer Access</h4>
                     <p>100+ decision-makers actively choosing tools. Adoption, not impressions.</p>
                     <div class="roi-example">
-                        <img src="images/building.jpg" alt="Participants building with AI tools">
+                        <img src="images/roi-crowd.jpeg" alt="Packed room of participants building at tables">
                         <p class="roi-example-text"><strong>Dec 2025:</strong> 70 participants built working prototypes on Lovable in 2 hours — zero coding experience. Every builder became a user.</p>
                     </div>
                 </div>
@@ -985,7 +978,7 @@
                     <h4>Content Assets</h4>
                     <p>Professional photo, video, testimonials, and case studies for your own marketing.</p>
                     <div class="roi-example">
-                        <img src="images/awards.jpeg" alt="Winners receiving awards on stage">
+                        <img src="images/roi-social.jpeg" alt="Participants taking group photos with sponsor branding">
                         <p class="roi-example-text"><strong>Dec 2025:</strong> 200+ professional photos, a polaroid showcase site (still live), and winner spotlights — all reusable sponsor marketing assets.</p>
                     </div>
                 </div>
@@ -996,7 +989,7 @@
                     <h4>Positioning</h4>
                     <p>Association with Atlantic Canada's premier AI innovation event for business.</p>
                     <div class="roi-example">
-                        <img src="images/demo.jpeg" alt="Team presenting demo on stage">
+                        <img src="images/roi-stage.jpeg" alt="Awards ceremony with audience watching">
                         <p class="roi-example-text"><strong>Dec 2025:</strong> Lovable owned the narrative — sold out in days, 7 winners on stage, now the reference point for AI in Atlantic Canada.</p>
                     </div>
                 </div>
@@ -1019,45 +1012,48 @@
 
             <div class="team-grid reveal">
                 <!-- Jitakshi -->
-                <div class="team-member">
-                    <div class="team-member-header">
+                <div class="team-card">
+                    <div class="team-card-top">
                         <div class="team-avatar"><img src="images/jitakshi.jpeg" alt="Jitakshi"></div>
                         <div>
                             <h3 class="team-name">Jitakshi</h3>
                             <p class="team-role-tag">Event Lead &amp; Tech Partnerships</p>
                         </div>
                     </div>
-                    <p class="team-bio">
-                        Community builder with direct relationships across the global AI and dev tools ecosystem. Proven track record turning those connections into unforgettable events.
-                    </p>
-                    <ul class="team-credentials">
-                        <li>Organized the Lovable Halifax Women's AI Hackathon</li>
-                        <li>Community events host for Lovable, Shopify, v0, Claude Code in Halifax</li>
-                        <li>Direct relationships with global AI &amp; dev tool companies</li>
-                        <li>Manages tech partnerships and event experience</li>
-                    </ul>
+                    <div class="team-card-body">
+                        <p class="team-bio">
+                            Community builder with direct relationships across the global AI and dev tools ecosystem. Turns those connections into unforgettable events.
+                        </p>
+                        <div class="team-tags">
+                            <span class="team-tag">Lovable Hackathon Organizer</span>
+                            <span class="team-tag">Lovable &middot; Shopify &middot; v0 &middot; Claude</span>
+                            <span class="team-tag">Global AI Partnerships</span>
+                            <span class="team-tag">Event Experience</span>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="team-divider"></div>
-
                 <!-- Bethany -->
-                <div class="team-member">
-                    <div class="team-member-header">
+                <div class="team-card">
+                    <div class="team-card-top">
                         <div class="team-avatar"><img src="images/bethany.jpeg" alt="Bethany Wilkie"></div>
                         <div>
                             <h3 class="team-name">Bethany Wilkie</h3>
                             <p class="team-role-tag">Business Strategy &amp; Atlantic Partnerships</p>
                         </div>
                     </div>
-                    <p class="team-bio">
-                        Founder, CEO, and innovation advisor with one of the deepest networks in Atlantic Canada's business and investment community.
-                    </p>
-                    <ul class="team-credentials">
-                        <li>Founder &amp; CEO of SomaDetect</li>
-                        <li>Startup Coach &amp; Innovation Advisor</li>
-                        <li>Deep network across Atlantic Canada's business &amp; investment community</li>
-                        <li>Manages sponsor outreach &amp; strategic partnerships</li>
-                    </ul>
+                    <div class="team-card-body">
+                        <p class="team-bio">
+                            Founder, CEO, and innovation advisor with one of the deepest networks in Atlantic Canada's business and investment community.
+                        </p>
+                        <div class="team-tags">
+                            <span class="team-tag">CEO of SomaDetect</span>
+                            <span class="team-tag">Startup Coach</span>
+                            <span class="team-tag">Innovation Advisor</span>
+                            <span class="team-tag">Atlantic Canada Network</span>
+                            <span class="team-tag">Strategic Partnerships</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
