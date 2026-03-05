@@ -905,6 +905,14 @@
         @media (max-width: 900px) { .budget-grid { grid-template-columns: repeat(2, 1fr); } }
         @media (max-width: 480px) { .budget-grid { grid-template-columns: 1fr; } }
 
+        /* ---- Partnership Tiers Grid ---- */
+        @media (max-width: 900px) {
+            .partner-tiers-grid { grid-template-columns: repeat(2, 1fr) !important; }
+        }
+        @media (max-width: 480px) {
+            .partner-tiers-grid { grid-template-columns: 1fr !important; }
+        }
+
         .budget-total { margin-top: 3rem; }
         .budget-total-inner {
             display: flex;
@@ -1003,6 +1011,8 @@
             border-color: rgba(203, 239, 67, 0.4);
         }
         .form-input::placeholder { color: var(--gray-600); }
+        select.form-input { appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%2378716C' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 1rem center; padding-right: 2.5rem; cursor: pointer; }
+        select.form-input option { background: var(--black); color: var(--white); }
         textarea.form-input { min-height: 100px; resize: vertical; }
         .tier-grid {
             display: grid;
@@ -1131,9 +1141,7 @@
             <a href="#track-record">Track Record</a>
             <a href="#the-day">The Day</a>
             <a href="#roi">ROI</a>
-            <a href="#investment">Investment</a>
             <a href="#team">Team</a>
-            <a href="#sponsor-form" class="nav-cta">Apply to Sponsor</a>
         </div>
     </nav>
 
@@ -1152,7 +1160,7 @@
             <h1>The Atlantic<br><span>AI Hackathon</span><br>for SMEs</h1>
 
             <p class="hero-sub">
-                Put your brand in front of 30&ndash;50 SMB decision-makers<br>actively building with AI tools. One room. One day. Real outcomes.
+                Put your brand in front of Atlantic Canada&rsquo;s most ambitious business owners &mdash;<br>building real AI tools, live, in one room.
             </p>
 
             <div class="hero-cta-group">
@@ -1188,8 +1196,8 @@
 
             <div class="bento reveal-stagger">
                 <div class="bento-card">
-                    <p class="bento-number" data-count="10">0</p>
-                    <p class="bento-text">Teams of SMB decision-makers building with your tools live</p>
+                    <p class="bento-number">30&ndash;50</p>
+                    <p class="bento-text">SMB Decision-Makers with Real Budgets</p>
                 </div>
                 <div class="bento-card">
                     <p class="bento-number">6+ hrs</p>
@@ -1197,7 +1205,7 @@
                 </div>
                 <div class="bento-card">
                     <p class="bento-number">Full</p>
-                    <p class="bento-text">Documentary, social content, and case study package</p>
+                    <p class="bento-text">Complete Content Package &mdash; photo, video, case studies delivered to you</p>
                 </div>
                 <div class="bento-card">
                     <p class="bento-number">First</p>
@@ -1248,7 +1256,7 @@
 
                     <div class="track-callout">
                         <p>Now we're levelling up.</p>
-                        <span>10 teams. 30&ndash;50 participants. Full day. Premier venue. Documentary coverage.</span>
+                        <span>Full day. Premier venue. Documentary coverage. Real outcomes.</span>
                     </div>
                 </div>
 
@@ -1296,6 +1304,9 @@
                 <h2 class="section-title">Your future customers,<br>building live in front of you.</h2>
                 <p class="section-desc" style="font-size: 1.1875rem; max-width: 640px; margin-top: 1.5rem;">
                     Business owners and operators who choose tools, sign contracts, and set budgets. Not students. Not hobbyists.
+                </p>
+                <p class="section-desc" style="font-size: 1.0625rem; max-width: 640px; margin-top: 1.25rem; font-style: italic;">
+                    This isn&rsquo;t a 500-person conference where your brand gets lost. It&rsquo;s an intimate, high-impact room where every participant knows your name by the end of the day.
                 </p>
             </div>
 
@@ -1449,150 +1460,19 @@
             <div class="roi-callout reveal">
                 <h3>Most sponsorships buy you visibility. This one puts your brand in the room where <em>30&ndash;50 business owners build something real</em> &mdash; and walk away talking about the experience.</h3>
             </div>
+
         </div>
     </section>
 
-    <!-- ============ YOUR INVESTMENT ============ -->
-    <section id="investment" class="section-light">
+    <!-- ============ WHAT HAPPENS AFTER ============ -->
+    <section class="section-light">
         <div class="container">
-            <div class="reveal">
-                <p class="section-label mono">06 &mdash; Your Investment</p>
-                <h2 class="section-title">Where the money goes.</h2>
-                <p class="section-desc">A transparent look at what it takes to run a full-day, premier AI build event &mdash; and how you can be part of making it happen.</p>
-            </div>
-
-            <div class="budget-grid reveal-stagger">
-                <div class="budget-card">
-                    <div class="budget-icon">
-                        <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8.25v-1.5m0 1.5c-1.355 0-2.697.056-4.024.166C6.845 8.51 6 9.473 6 10.608v2.513m6-4.871c1.355 0 2.697.056 4.024.166C17.155 8.51 18 9.473 18 10.608v2.513M15 8.25v-1.5m-6 1.5v-1.5m12 9.75l-1.5.75a3.354 3.354 0 01-3 0 3.354 3.354 0 00-3 0 3.354 3.354 0 01-3 0 3.354 3.354 0 00-3 0 3.354 3.354 0 01-3 0L3 16.5m15-3.379a48.474 48.474 0 00-6-.371c-2.032 0-4.034.126-6 .371m12 0c.39.049.777.102 1.163.16 1.07.16 1.837 1.094 1.837 2.175v5.169c0 .621-.504 1.125-1.125 1.125H4.125A1.125 1.125 0 013 20.625v-5.17c0-1.08.768-2.014 1.837-2.174A47.78 47.78 0 016 13.12M12.265 3.11a.375.375 0 11-.53 0L12 2.845l.265.265z"/></svg>
-                    </div>
-                    <p class="budget-label">Food &amp; Catering</p>
-                    <p class="budget-detail">Breakfast, lunch, snacks, networking reception &mdash; fueling a full day of building</p>
-                </div>
-
-                <div class="budget-card">
-                    <div class="budget-icon">
-                        <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21M3 3h12m-.75 4.5H21m-3.75 0h.008v.008h-.008V7.5z"/></svg>
-                    </div>
-                    <p class="budget-label">Venue</p>
-                    <p class="budget-detail">Premier Halifax space with AV, wifi, and staging for main-stage demos</p>
-                </div>
-
-                <div class="budget-card">
-                    <div class="budget-icon">
-                        <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9.53 16.122a3 3 0 00-5.78 1.128 2.25 2.25 0 01-2.4 2.245 4.5 4.5 0 008.4-2.245c0-.399-.078-.78-.22-1.128zm0 0a15.998 15.998 0 003.388-1.62m-5.043-.025a15.994 15.994 0 011.622-3.395m3.42 3.42a15.995 15.995 0 004.764-4.648l3.876-5.814a1.151 1.151 0 00-1.597-1.597L14.146 6.32a15.996 15.996 0 00-4.649 4.763m3.42 3.42a6.776 6.776 0 00-3.42-3.42"/></svg>
-                    </div>
-                    <p class="budget-label">Branding &amp; Materials</p>
-                    <p class="budget-detail">Signage, banners, badges, swag bags &mdash; your brand woven into every touchpoint</p>
-                </div>
-
-                <div class="budget-card">
-                    <div class="budget-icon">
-                        <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M16.5 18.75h-9m9 0a3 3 0 013 3h-15a3 3 0 013-3m9 0v-3.375c0-.621-.503-1.125-1.125-1.125h-.871M7.5 18.75v-3.375c0-.621.504-1.125 1.125-1.125h.872m5.007 0H9.497m5.007 0a7.454 7.454 0 01-.982-3.172M9.497 14.25a7.454 7.454 0 00.981-3.172M5.25 4.236c-.982.143-1.954.317-2.916.52A6.003 6.003 0 007.73 9.728M5.25 4.236V4.5c0 2.108.966 3.99 2.48 5.228M5.25 4.236V2.721C7.456 2.41 9.71 2.25 12 2.25c2.291 0 4.545.16 6.75.47v1.516M18.75 4.236c.982.143 1.954.317 2.916.52A6.003 6.003 0 0016.27 9.728M18.75 4.236V4.5c0 2.108-.966 3.99-2.48 5.228m0 0a6.003 6.003 0 01-4.52-6.478 6.003 6.003 0 01-4.52 6.478"/></svg>
-                    </div>
-                    <p class="budget-label">Prizes &amp; Awards</p>
-                    <p class="budget-detail">Multiple categories so more teams win &mdash; best prototype, best pitch, people&rsquo;s choice, and more</p>
-                </div>
-
-                <div class="budget-card">
-                    <div class="budget-icon">
-                        <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m15.75 10.5 4.72-4.72a.75.75 0 0 1 1.28.53v11.38a.75.75 0 0 1-1.28.53l-4.72-4.72M4.5 18.75h9a2.25 2.25 0 0 0 2.25-2.25v-9a2.25 2.25 0 0 0-2.25-2.25h-9A2.25 2.25 0 0 0 2.25 7.5v9a2.25 2.25 0 0 0 2.25 2.25Z"/></svg>
-                    </div>
-                    <p class="budget-label">Content Capture</p>
-                    <p class="budget-detail">Professional photography, videography, and documentary-style coverage for post-event marketing</p>
-                </div>
-
-                <div class="budget-card">
-                    <div class="budget-icon">
-                        <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z"/></svg>
-                    </div>
-                    <p class="budget-label">Judges &amp; Mentors</p>
-                    <p class="budget-detail">Expert panel for judging, plus on-floor mentors to guide teams throughout the build day</p>
-                </div>
-
-                <div class="budget-card">
-                    <div class="budget-icon">
-                        <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6h9.75M10.5 6a1.5 1.5 0 11-3 0m3 0a1.5 1.5 0 10-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-9.75 0h9.75"/></svg>
-                    </div>
-                    <p class="budget-label">Event Management</p>
-                    <p class="budget-detail">Coordination, logistics, registration, and day-of operations to keep everything running smoothly</p>
-                </div>
-
-                <div class="budget-card">
-                    <div class="budget-icon">
-                        <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.324.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 011.37.49l1.296 2.247a1.125 1.125 0 01-.26 1.431l-1.003.827c-.293.24-.438.613-.431.992a6.759 6.759 0 010 .255c-.007.378.138.75.43.99l1.005.828c.424.35.534.954.26 1.43l-1.298 2.247a1.125 1.125 0 01-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.57 6.57 0 01-.22.128c-.331.183-.581.495-.644.869l-.213 1.28c-.09.543-.56.941-1.11.941h-2.594c-.55 0-1.02-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 01-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 01-1.369-.49l-1.297-2.247a1.125 1.125 0 01.26-1.431l1.004-.827c.292-.24.437-.613.43-.992a6.932 6.932 0 010-.255c.007-.378-.138-.75-.43-.99l-1.004-.828a1.125 1.125 0 01-.26-1.43l1.297-2.247a1.125 1.125 0 011.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.087.22-.128.332-.183.582-.495.644-.869l.214-1.281z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
-                    </div>
-                    <p class="budget-label">Miscellaneous</p>
-                    <p class="budget-detail">AI tool credits, insurance, contingency &mdash; because you never know</p>
-                </div>
-            </div>
-
-            <div class="sponsor-form reveal" id="sponsor-form">
-                <h3>Apply to Sponsor</h3>
-                <p class="form-intro">Pick a level that works for you. Every contribution helps us build something meaningful &mdash; and we&rsquo;ll make sure you get real value back.</p>
-
-                <form action="https://formspree.io/f/xbdavyrd" method="POST">
-                    <div class="form-group">
-                        <label>Sponsorship Level</label>
-                        <div class="tier-grid">
-                            <div class="tier-option">
-                                <input type="radio" name="sponsorship_tier" id="tier-500" value="$500 — Community Supporter">
-                                <label for="tier-500">
-                                    <span class="tier-amount">$500</span>
-                                    <span class="tier-name">Community Supporter</span>
-                                </label>
-                            </div>
-                            <div class="tier-option">
-                                <input type="radio" name="sponsorship_tier" id="tier-2k" value="$2,000 — Experience Sponsor">
-                                <label for="tier-2k">
-                                    <span class="tier-amount">$2K</span>
-                                    <span class="tier-name">Experience Sponsor</span>
-                                </label>
-                            </div>
-                            <div class="tier-option">
-                                <input type="radio" name="sponsorship_tier" id="tier-5k" value="$5,000 — Track Sponsor">
-                                <label for="tier-5k">
-                                    <span class="tier-amount">$5K</span>
-                                    <span class="tier-name">Track Sponsor</span>
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="sponsor-name">Your Name</label>
-                            <input type="text" name="name" id="sponsor-name" class="form-input" placeholder="Jane Smith" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="sponsor-org">Organization</label>
-                            <input type="text" name="organization" id="sponsor-org" class="form-input" placeholder="Acme Corp" required>
-                        </div>
-                    </div>
-
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="sponsor-email">Email</label>
-                            <input type="email" name="email" id="sponsor-email" class="form-input" placeholder="jane@acme.com" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="sponsor-role">Your Role</label>
-                            <input type="text" name="role" id="sponsor-role" class="form-input" placeholder="Head of Marketing">
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="sponsor-collab">How would you like to collaborate?</label>
-                        <textarea name="collaboration_ideas" id="sponsor-collab" class="form-input" placeholder="e.g., 5-minute speaking slot, booth presence, branded prize category, tool demo during orientation, or anything else you'd like to get from the partnership..."></textarea>
-                    </div>
-
-                    <div class="form-submit">
-                        <button type="submit" class="btn-primary">
-                            Submit Sponsorship Interest
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14m0 0l-6-6m6 6l-6 6"/></svg>
-                        </button>
-                    </div>
-                </form>
+            <div class="reveal" style="text-align: center; max-width: 800px; margin-left: auto; margin-right: auto;">
+                <h2 class="section-title">Your investment doesn&rsquo;t end<br>when the day does.</h2>
+                <p style="font-size: 1.0625rem; color: var(--gray-500); line-height: 1.8; font-weight: 300; margin-top: 1.5rem;">
+                    Within one week of the event, every sponsor receives a full content package (professional photos, video highlights, social media assets), a post-event outcomes report (what was built, participant feedback, engagement metrics), and warm introductions to participants who used your tools or expressed interest in your products.
+                </p>
+                <p style="font-size: 1.0625rem; font-style: italic; color: var(--black); margin-top: 1.75rem; font-weight: 500;">This turns a one-day sponsorship into a month-long marketing asset.</p>
             </div>
         </div>
     </section>
@@ -1601,7 +1481,7 @@
     <section id="team" class="section-dark team-section">
         <div class="container">
             <div class="reveal team-header">
-                <p class="section-label mono">07 &mdash; The Team</p>
+                <p class="section-label mono">06 &mdash; The Team</p>
 
                 <h2 class="section-title">Built by people who've<br>done this before.</h2>
             </div>
@@ -1664,7 +1544,6 @@
                 <a href="#track-record">Track Record</a>
                 <a href="#the-day">The Day</a>
                 <a href="#roi">ROI</a>
-                <a href="#investment">Investment</a>
                 <a href="#team">Team</a>
                 <a href="https://sme-halifax-hackathon-participants.vercel.app/" target="_blank" rel="noopener" style="color: var(--accent);">Participant Waitlist &rarr;</a>
             </div>
@@ -1724,7 +1603,7 @@
                             current = target;
                             clearInterval(timer);
                         }
-                        el.textContent = Math.floor(current) + (target === 10 ? ' teams' : '');
+                        el.textContent = Math.floor(current);
                     }, 16);
                     counterObserver.unobserve(el);
                 }
